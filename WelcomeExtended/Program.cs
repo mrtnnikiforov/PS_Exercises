@@ -1,4 +1,5 @@
-﻿using Welcome.Model;
+﻿using Microsoft.Extensions.Logging;
+using Welcome.Model;
 using Welcome.Others;
 using Welcome.View;
 using Welcome.ViewModel;
@@ -34,7 +35,7 @@ namespace WelcomeExtended
             }
             catch (Exception e)
             {
-                Delegates.Log2(e.Message);
+                ActionOnError log = new ActionOnError(Delegates.Log);
             }
             finally
             {
