@@ -12,6 +12,11 @@ namespace WelcomeExtended.Loggers
             return new HashLogger(categoryName);
         }
 
+        public ILogger CreateFileLogger(string categoryName)
+        {
+            return new FileLogger();
+        }
+
         public void Dispose()
         {
             return;

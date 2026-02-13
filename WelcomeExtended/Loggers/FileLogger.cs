@@ -12,7 +12,7 @@ namespace WelcomeExtended.Loggers
 
         public void Log<TState>(LogLevel logLevel, EventId eventId, TState state, Exception? exception, Func<TState, Exception?, string> formatter)
         {
-            var message = $"[{logLevel}] {formatter(state, exception)}";
+            var message = $"[{DateTime.Now}] [{logLevel}] {formatter(state, exception)}";
             File.AppendAllText(_filePath, message + Environment.NewLine);
         }
     }
