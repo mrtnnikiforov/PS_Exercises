@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="DataLayer/DataLayer.csproj" Id="b7774765-e13c-4440-bd53-fd0b1e34e136" />
   <Project Path="Welcome/Welcome.csproj" />
   <Project Path="WelcomeExtended/WelcomeExtended.csproj" />
 </Solution>
