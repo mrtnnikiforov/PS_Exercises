@@ -7,7 +7,7 @@ using Welcome.Others;
 
 namespace DataLayer.Database
 {
-    internal class DatabaseContext : DbContext
+    public class DatabaseContext : DbContext
     {
         public DbSet<LogEntry> Logs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
