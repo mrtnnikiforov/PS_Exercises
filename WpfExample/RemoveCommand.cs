@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Windows.Input;
+
+namespace WpfExample
+{
+    public class RemoveCommand : ICommand
+    {
+        public void Execute(object parameter)
+        {
+            var nameList = parameter as NamesList;
+            var oldName = nameList.SelectedName;
+            nameList.Names.Remove(oldName);
+        }
+        public bool CanExecute(object parameter)
+        {
+            return true;
+        }
+
+        public event EventHandler CanExecuteChanged;
+    }
+}
