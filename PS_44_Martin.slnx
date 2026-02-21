@@ -1,6 +1,8 @@
 <Solution>
   <Project Path="DataLayer/DataLayer.csproj" Id="b7774765-e13c-4440-bd53-fd0b1e34e136" />
+  <Project Path="EasyMVVM/EasyMVVM.csproj" Id="8dac7941-43c4-46e0-9565-652cd8c5e8a2" />
   <Project Path="UI/UI.csproj" Id="96a9c686-4565-4295-a5fd-897145a660e7" />
   <Project Path="Welcome/Welcome.csproj" />
   <Project Path="WelcomeExtended/WelcomeExtended.csproj" />
+  <Project Path="WpfExample/WpfExample.csproj" Id="30a906a1-415c-4a29-97df-b7af8c2f515a" />
 </Solution>
