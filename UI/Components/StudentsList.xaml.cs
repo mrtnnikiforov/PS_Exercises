@@ -19,12 +19,6 @@ namespace UI.Components
         public StudentsList()
         {
             InitializeComponent();
-            using (var context = new DatabaseContext())
-            {
-                context.Database.EnsureCreated();
-                var records = context.Users.ToList();
-                students.DataContext = records;
-            }
         }
     }
 }

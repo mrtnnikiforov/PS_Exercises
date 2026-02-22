@@ -1,6 +1,4 @@
-using DataLayer.Database;
 using DataLayer.Model;
-using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -11,11 +9,6 @@ namespace UI.Components
         public LogsData()
         {
             InitializeComponent();
-
-            using var context = new DatabaseContext();
-            context.Database.EnsureCreated();
-            var logs = context.Logs.ToList();
-            logsGrid.ItemsSource = logs;
         }
 
         private void OnMouseDoubleClick(object sender, System.Windows.Input.MouseButtonEventArgs e)
