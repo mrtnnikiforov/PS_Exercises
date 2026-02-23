@@ -36,6 +36,18 @@ namespace UI
             LoadData();
         }
 
+        public void FilterLogsByUser(DatabaseUser user)
+        {
+            using (var context = new DatabaseContext())
+            {
+                var filtered = context.Logs
+                    .Where(l => l.Message != null && l.Message.Contains(user.Name))
+                    .ToList();
+
+                Logs = new ObservableCollection<LogEntry>(filtered);
+            }
+        }
+
         private void LoadData()
         {
             using (var context = new DatabaseContext())

@@ -6,7 +6,7 @@
         <converter:PasswordHidingConverter x:Key="PasswordHidingConverter" />
     </UserControl.Resources>
     <Grid>
-        <DataGrid ItemsSource="{Binding Students}" AutoGenerateColumns="False">
+        <DataGrid x:Name="studentsGrid" ItemsSource="{Binding Students}" AutoGenerateColumns="False" MouseDoubleClick="OnMouseDoubleClick">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="#" IsReadOnly="True" Binding="{Binding Id}" />
                 <DataGridTextColumn Header="Names" IsReadOnly="True" Binding="{Binding Name}" />
